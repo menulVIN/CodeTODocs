@@ -15,6 +15,9 @@ Release v2.0 modernizes the GUI, fixes a crash on startup, and adds packaging he
 - `dist\CodeDocs.exe` (built with `build_dist.bat`)
 - `README_RUN.md`, `DIST_INSTRUCTIONS.md`, `SHARE_README.md`
 
+## For users
+If you just want to run the app, download `CodeDocs.exe` from the release assets and double-click it. If you prefer a ZIP, download the packaged ZIP asset, unzip it, and run the EXE inside.
+
 ## Windows download & install instructions (for release notes)
 1. Download `CodeDocs.exe` from the release assets.
 2. Run directly (portable EXE) or run the included installer (if provided) to install to Program Files.

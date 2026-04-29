@@ -2,46 +2,53 @@
 
 Convert a codebase into merged documentation files (TXT, DOCX, HTML) suitable for sharing or feeding into AI systems.
 
-Key features
-- Extract symbols (classes, functions) across many languages
+## Download and run
+
+If you just want to use the app, download the latest Windows release from the GitHub **Releases** page and run `CodeDocs.exe`.
+
+Release page:
+- https://github.com/<your-username>/<your-repo>/releases/latest
+
+How to use it:
+1. Download the release asset ZIP or EXE.
+2. Unzip it if needed.
+3. Double-click `CodeDocs.exe`.
+
+## What it does
+
+- Extracts symbols such as classes and functions across many languages
 - Optional syntax highlighting with `pygments`
 - Export to `.docx` via `python-docx`
 - Modern dark GUI with optional `ttkbootstrap` theme
 
-Quick Start (Windows)
+## For Windows users who want to run from source
 
-1. Open PowerShell and set up a virtual environment (recommended):
+If you prefer to run from the source code instead of the release EXE:
 
 ```powershell
-cd "<path-to-repo>/CodeTODocs"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1     # or use activate.bat for cmd.exe
 pip install -r requirements.txt
-```
-
-2. Run the GUI:
-
-```powershell
 .\.venv\Scripts\python.exe code_to_documents_gui.py
 ```
 
-Or double-click `run_with_venv_no_console.bat` at the repo root to launch without a console window.
+You can also double-click `run_with_venv_no_console.bat` to launch without a console window.
 
-Building a single-file executable
+## Build a release EXE
 
-Run the included build script to create a single-file `CodeDocs.exe` using PyInstaller (Windows only):
+For maintainers or contributors, run the included build script to create a single-file `CodeDocs.exe` using PyInstaller on Windows:
 
 ```powershell
-cd "F:\CODE TO DOCS\CodeTODocs"
 .\build_dist.bat
 ```
 
-Packaging
+## Packaging
 
 - Use `installer.iss` and `build_installer.bat` (requires Inno Setup) to create an installer.
-- Use `zip_pack.bat` to create a simple distributable ZIP containing the exe and docs.
+- Use `zip_pack.bat` to create a simple distributable ZIP containing the EXE and docs.
 
-Repository layout
+## Repository layout
+
 - `code_to_documents_gui.py` — main application
 - `requirements.txt` — dependencies
 - `build_dist.bat` — PyInstaller build script
@@ -49,9 +56,9 @@ Repository layout
 - `run_with_venv.bat`, `run_with_venv_no_console.bat` — launchers
 - `zip_pack.bat` — create ZIP package
 
-Contributing
+## Contributing
 
 If you want to contribute or package this for distribution, please open an issue or submit a pull request.
 
-License
+## License
 
